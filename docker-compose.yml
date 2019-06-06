@@ -1,0 +1,47 @@
+version: "2"
+services:
+    #nginx
+    nginx:
+        image: hub.c.163.com/library/nginx:latest
+        ports:
+            - "80:80"
+            - "1443:443"
+        volumes:
+            # - ./www/:/usr/share/nginx/html/:rw
+            # - ./conf/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+            # - ./conf/nginx/conf.d:/etc/nginx/conf.d/:ro
+            - ./log/nginx/:/var/log/nginx/:rw
+
+    # nodejs:
+    #     image: hub.c.163.com/library/node:latest
+    #     volumes:
+    #         - /root/node-web-server/node:/node-web-server/node
+
+    #redis
+    redis:
+        image: hub.c.163.com/library/redis:latest
+        ports:
+            - "6379:6379"
+        restart: always
+
+    #mysql
+    mysql:
+        image: hub.c.163.com/library/mysql:latest
+        restart: always
+        ports:
+            - "3306:3306"
+        environment:
+            TZ: Asia/Shanghai
+            MYSQL_ROOT_PASSWORD: "root" #mysql root账号的密码
+            MYSQL_USER: "test"
+            MYSQL_PASS: "test"
+        # --default-authentication-plugin=mysql_native_password 这行代码解决无法访问的问题
+        command: --default-authentication-plugin=mysql_native_password
+            --character-set-server=utf8mb4
+            --collation-server=utf8mb4_general_ci
+            --explicit_defaults_for_timestamp=true
+            --lower_case_table_names=1
+            --max_allowed_packet=128M
+            --sql-mode="STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO"
+        volumes:
+            - /root/node-web-server/mysql:/node-web-server/mysql
