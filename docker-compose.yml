@@ -4,7 +4,7 @@ services:
     nginx:
         image: hub.c.163.com/library/nginx:latest
         ports:
-            - "8080:80"
+            - "80:80"
             - "1443:443"
         volumes:
             - ./www/:/usr/share/nginx/html/:rw
