@@ -1,0 +1,11 @@
+2019/06/10 03:13:05 [emerg] 1#1: unexpected "}" in /etc/nginx/nginx.conf:50
+2019/06/10 03:15:00 [emerg] 1#1: unexpected "}" in /etc/nginx/nginx.conf:50
+2019/06/10 03:17:39 [emerg] 1#1: unexpected "}" in /etc/nginx/nginx.conf:50
+2019/06/10 03:19:53 [emerg] 1#1: unexpected "}" in /etc/nginx/nginx.conf:50
+2019/06/10 03:25:39 [emerg] 1#1: unexpected "}" in /etc/nginx/nginx.conf:50
+2019/06/10 03:31:16 [emerg] 1#1: unexpected "}" in /etc/nginx/nginx.conf:50
+2019/06/10 03:51:59 [error] 6#6: *2 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.99.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.99.100", referrer: "http://192.168.99.100/"
+2019/06/10 03:55:40 [error] 6#6: *1 open() "/usr/share/nginx/html/web" failed (2: No such file or directory), client: 192.168.99.1, server: localhost, request: "GET /web HTTP/1.1", host: "192.168.99.100"
+2019/06/10 03:55:42 [error] 6#6: *1 open() "/usr/share/nginx/html/web" failed (2: No such file or directory), client: 192.168.99.1, server: localhost, request: "GET /web HTTP/1.1", host: "192.168.99.100"
+2019/06/10 03:55:44 [error] 6#6: *1 open() "/usr/share/nginx/html/web" failed (2: No such file or directory), client: 192.168.99.1, server: localhost, request: "GET /web HTTP/1.1", host: "192.168.99.100"
+2019/06/10 04:02:01 [error] 6#6: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.99.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.99.100:8080", referrer: "http://192.168.99.100:8080/"

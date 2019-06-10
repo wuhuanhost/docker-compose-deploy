@@ -27,3 +27,7 @@
     ├── site1                   站点1根目录
     └── site2                   站点2根目录
 ```
+
+### 注意
+
+> 在 windows 下此目录必须放在系统用户目录`/c/Users/wuhua/AppData/Local/`下面才能正确的挂载目录
