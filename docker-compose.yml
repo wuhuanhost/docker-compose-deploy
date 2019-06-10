@@ -45,3 +45,13 @@ services:
             --sql-mode="STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION,NO_ZERO_DATE,NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO"
         volumes:
             - /root/node-web-server/mysql:/node-web-server/mysql
+    # 构建镜像，镜像项目必须在home目录
+    # node-server:
+    #     build:
+    #         context: .
+    #         dockerfile: Dockerfile
+    #     image: node-server:1.0.0
+    #     container_name: node-server
+    #     restart: always
+    #     ports:
+    #         - "7001:7001"
